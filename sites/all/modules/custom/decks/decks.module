@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Decks feature.
+ */
+
+include_once 'decks.features.inc';
