@@ -19,7 +19,7 @@ function decks_ctools_plugin_api($module = NULL, $api = NULL) {
 function decks_node_info() {
   $items = array(
     'deck' => array(
-      'name' => t('deck'),
+      'name' => t('Deck'),
       'base' => 'node_content',
       'description' => t('a deck in the collection'),
       'has_title' => '1',

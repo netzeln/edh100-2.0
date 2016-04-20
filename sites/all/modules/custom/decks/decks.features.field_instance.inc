@@ -54,7 +54,7 @@ function decks_field_default_field_instances() {
       'settings' => array(
         'increment' => 15,
         'input_format' => 'custom',
-        'input_format_custom' => 'mm/y',
+        'input_format_custom' => 'm/y',
         'label_position' => 'none',
         'no_fieldset' => 0,
         'text_parts' => array(),
@@ -107,7 +107,7 @@ function decks_field_default_field_instances() {
     'bundle' => 'deck',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'the Name of the deck if there is one.    Commander name should be title.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -125,7 +125,7 @@ function decks_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_commander',
-    'label' => 'Commander',
+    'label' => 'Deck Name',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -271,17 +271,60 @@ function decks_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-deck-field_tappedout_link'.
+  $field_instances['node-deck-field_tappedout_link'] = array(
+    'bundle' => 'deck',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'URL for tappedout if it exists',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tappedout_link',
+    'label' => 'TappedOut',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Built');
   t('Colors');
-  t('Commander');
   t('Commander_image');
+  t('Deck Name');
   t('Deck Tags');
   t('Decklist');
+  t('TappedOut');
+  t('URL for tappedout if it exists');
   t('card image');
   t('select the colors of the deck');
   t('tags to describe the deck');
+  t('the Name of the deck if there is one.    Commander name should be title.');
 
   return $field_instances;
 }
