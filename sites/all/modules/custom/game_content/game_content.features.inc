@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * decks.features.inc
+ * game_content.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function decks_ctools_plugin_api($module = NULL, $api = NULL) {
+function game_content_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -16,14 +16,14 @@ function decks_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function decks_node_info() {
+function game_content_node_info() {
   $items = array(
-    'deck' => array(
-      'name' => t('Deck'),
+    'game' => array(
+      'name' => t('Game'),
       'base' => 'node_content',
-      'description' => t('a deck in the collection'),
+      'description' => t('for tracking a particular Game'),
       'has_title' => '1',
-      'title_label' => t('General'),
+      'title_label' => t('Game'),
       'help' => '',
     ),
   );
